@@ -13,11 +13,11 @@ const unsigned int screen_width = 800;
 const unsigned int screen_height = 800;
 
 GLfloat vertices[] = {
-	-0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,	0.0f, 0.0f,
-	-0.5f, 0.0f, -0.5f,     0.83f, 0.70f, 0.44f,	5.0f, 0.0f,
-	 0.5f, 0.0f, -0.5f,     0.83f, 0.70f, 0.44f,	0.0f, 0.0f,
-	 0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,	5.0f, 0.0f,
-	 0.0f, 0.8f,  0.0f,     0.92f, 0.86f, 0.76f,	2.5f, 5.0f
+	-0.5f, 0.0f,  0.5f,   1.0f, 0.0f, 1.0f,   0.0f, 0.0f,
+	-0.5f, 0.0f, -0.5f,   1.0f, 0.0f, 1.0f,   5.0f, 0.0f,
+	 0.5f, 0.0f, -0.5f,   1.0f, 0.0f, 1.0f,   0.0f, 0.0f,
+	 0.5f, 0.0f,  0.5f,   1.0f, 0.0f, 1.0f,   5.0f, 0.0f,
+	 0.0f, 0.8f,  0.0f,   1.0f, 0.0f, 1.0f,   2.5f, 5.0f
 };
 
 GLuint indices[] = {
@@ -56,6 +56,7 @@ int main() {
 	Texture brickTex("brick.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	brickTex.texUnit(shaderProgram, "tex0", 0);
 
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); // GL_LINE, GL_FILL
 	glEnable(GL_DEPTH_TEST);
 	glfwSwapInterval(1);
 
