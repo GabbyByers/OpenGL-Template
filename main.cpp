@@ -14,10 +14,10 @@ const unsigned int screen_height = 800;
 
 GLfloat vertices[] = {
 	-0.5f, 0.0f,  0.5f,   1.0f, 0.0f, 1.0f,   0.0f, 0.0f,
-	-0.5f, 0.0f, -0.5f,   1.0f, 0.0f, 1.0f,   5.0f, 0.0f,
-	 0.5f, 0.0f, -0.5f,   1.0f, 0.0f, 1.0f,   0.0f, 0.0f,
-	 0.5f, 0.0f,  0.5f,   1.0f, 0.0f, 1.0f,   5.0f, 0.0f,
-	 0.0f, 0.8f,  0.0f,   1.0f, 0.0f, 1.0f,   2.5f, 5.0f
+	-0.5f, 0.0f, -0.5f,   0.0f, 1.0f, 1.0f,   5.0f, 0.0f,
+	 0.5f, 0.0f, -0.5f,   1.0f, 1.0f, 0.0f,   0.0f, 0.0f,
+	 0.5f, 0.0f,  0.5f,   0.0f, 1.0f, 0.0f,   5.0f, 0.0f,
+	 0.0f, 0.8f,  0.0f,   1.0f, 0.0f, 0.0f,   2.5f, 5.0f
 };
 
 GLuint indices[] = {
@@ -67,7 +67,7 @@ int main() {
 		shaderProgram.Activate();
 
 		camera.Inputs(window);
-		camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix");
+		camera.Matrix(45.0f, 1.0f, 100.0f, shaderProgram, "camMatrix");
 
 		brickTex.Bind();
 		VAO1.Bind();
