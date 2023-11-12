@@ -5,7 +5,7 @@
 #include<glm/glm.hpp>
 #include<glm/gtc/matrix_transform.hpp>
 #include<glm/gtc/type_ptr.hpp>
-#include"ShadersTextures.h"
+#include"ShaderTexture.h"
 #include"Objects.h"
 #include"Camera.h"
 
@@ -13,11 +13,11 @@ const unsigned int screen_width = 800;
 const unsigned int screen_height = 800;
 
 struct vertex {
-	float xPos;
-	float yPos;
-	float zPos;
-	float xTex;
-	float yTex;
+	float x_pos;
+	float y_pos;
+	float z_pos;
+	float x_tex;
+	float y_tex;
 };
 
 vertex vertices[] = {
@@ -66,10 +66,10 @@ int main() {
 	EBO1.Unbind();
 
 	Shader shaderProgram("default.vert", "default.frag");
-	Texture brickTex("Textures/obama.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	Texture brickTex("Textures/white.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	brickTex.texUnit(shaderProgram, "tex0", 0);
 
-	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); // GL_LINE, GL_FILL
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // GL_LINE, GL_FILL
 	glEnable(GL_DEPTH_TEST);
 	glfwSwapInterval(0);
 

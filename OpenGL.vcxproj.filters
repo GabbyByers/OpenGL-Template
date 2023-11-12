@@ -32,7 +32,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ShadersTextures.h">
+    <ClInclude Include="ShaderTexture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Objects.h">
@@ -55,6 +55,9 @@
       <Filter>Resource Files\Textures</Filter>
     </Image>
     <Image Include="Textures\brick.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="Textures\white.png">
       <Filter>Resource Files\Textures</Filter>
     </Image>
   </ItemGroup>

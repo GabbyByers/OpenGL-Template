@@ -6,7 +6,7 @@
 #include<glm/gtc/type_ptr.hpp>
 #include<glm/gtx/rotate_vector.hpp>
 #include<glm/gtx/vector_angle.hpp>
-#include"ShadersTextures.h"
+#include"ShaderTexture.h"
 
 class Camera {
 public:
