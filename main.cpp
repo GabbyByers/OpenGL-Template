@@ -71,7 +71,7 @@ int main() {
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); // GL_LINE, GL_FILL
 	glEnable(GL_DEPTH_TEST);
-	glfwSwapInterval(1);
+	glfwSwapInterval(0);
 
 	Camera camera(screen_width, screen_height, glm::vec3(0.0f, 0.0f, 2.0f));
 	while (!glfwWindowShouldClose(window)) {
